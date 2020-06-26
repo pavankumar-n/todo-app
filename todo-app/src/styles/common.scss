@@ -1,0 +1,62 @@
+.h-120 {
+    height: 120px;
+}
+
+.h-150 {
+    height: 150px;
+}
+
+.border-outline {
+    border: 1px solid #ccc;
+}
+
+.BR-5 {
+    border-radius: 5px;
+}
+
+hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.CP {
+    cursor: pointer;
+}
+
+.white {
+    color: $white;
+}
+
+.blue {
+    color: $blue; 
+}
+
+.bg-pink {
+    background-color: $pink;
+}
+
+input[type=text] {
+    color: $font-color;
+    font-size: 14px;
+    padding-left: 5px;
+}
+
+.font-icons {
+    color: $font-color;
+    cursor: pointer;
+}
+
+.flex-align-items {
+    display: flex;
+    align-items: center;
+}
+
+.f-13 {
+    font-size: 13px;
+}

@@ -1,0 +1,44 @@
+.sidebar-wrapper {
+    background-color: $sidebar-bgcolor;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    min-width: 50px;
+    max-width: 50px;
+    padding: 10px 5px;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 25px;
+    height: 25px;
+}
+
+.sidebar-icons {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.default-user {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.noti-count {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+    left: 14px;
+    bottom: 30px;
+    font-size: 12px;
+    text-align: center;
+    &::before {
+        content: "1";
+    }
+}

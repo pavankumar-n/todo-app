@@ -1,0 +1,83 @@
+.top-row-container {
+    padding: 10px 20px;
+}
+
+.new-btn {
+    background-color: $blue;
+    color: $white;
+    line-height: 15px;
+    height: 25px;
+}
+
+.row-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.description {
+    margin-bottom: 0;
+    font-size: 12px;
+    color: #ccc;
+    font-weight: 200;
+}
+
+.menu-label {
+    span {
+        font-weight: 500;
+        color: $font-color;
+        font-size: 18px;
+    }
+}
+
+.BR-right {
+    border-radius: 0 20px 20px 0;
+}
+
+.BR-left {
+    border-radius: 20px 0 0 20px; 
+}
+
+.filter-board-inp {
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    line-height: 20px;
+    width: 150px;
+}
+
+.main-table {
+    color: $font-color;
+    label {
+        font-size: 14px;
+    }
+}
+
+.video-icon {
+    color: $blue;
+    padding: 3px 3px 3px 10px;
+}
+
+.call-icon-wrap {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    span {
+        font-size: 14px;
+        color: $font-color;
+        padding: 3px 10px 3px 3px;
+    }
+}
+
+.user-activities {
+    border: 1px solid #ccc;
+    padding: 3px 10px;
+    border-radius: 4px;
+    color: $font-color;
+    font-size: 14px;
+    span {
+        border-left: 1px solid #ccc;
+        margin-left: 5px;
+        padding-left: 5px;
+    }
+}

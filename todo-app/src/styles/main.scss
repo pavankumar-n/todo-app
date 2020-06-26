@@ -1,0 +1,30 @@
+@import "./variables";
+
+.page-container {
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 0px);
+    margin-top: 0px;
+}
+
+.strip {
+    min-width: 10px;
+    max-width: 10px;
+    background-color: $sidebar-bgcolor;
+}
+
+.left-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    overflow: hidden;
+    min-height: 350px;
+}
+
+.right-container {
+    width: calc(100vw - 295px);
+    // width: calc(100vw - 84px);
+    height: calc(100vh - 0px);
+    overflow-y: auto;
+    box-sizing: border-box;
+}
