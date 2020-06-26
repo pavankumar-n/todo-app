@@ -66,3 +66,19 @@
         justify-content: space-evenly;
     }
 }
+
+.sub-menu-wrap {
+    margin-left: 15px;
+    .sub-items {
+        font-size: 14px;
+        font-weight: normal;
+        margin: 5px;
+        padding: 5px;
+        cursor: pointer;
+    }
+    .active {
+        color: $blue;
+        background-color: $light-blue;
+        border-radius: 5px;
+    }
+}

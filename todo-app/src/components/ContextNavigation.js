@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import TreeView from "./TreeView";
 
 class ContextNavigation extends Component {
 
@@ -8,40 +9,48 @@ class ContextNavigation extends Component {
             menuItems: [{
                 id: "1",
                 name: "Main",
-                subMenu: [{id: "1.1", name: "Web Design"}, {id: "1.2", name: "Web Application"}],
+                subMenu: [{ id: "1.1", name: "Web Design" }, { id: "1.2", name: "Web Application" }, { id: "1.3", name: "Websites" }],
                 expand: true
-            }]
+            }],
+            activeItem: { id: "1.1", name: "Web Design" }
         }
+        this.expandItem     = this.expandItem.bind(this);
+        this.setActiveItem  = this.setActiveItem.bind(this);
+    }
+
+    expandItem(item) {
+        let { menuItems } = this.state;
+        let index = menuItems.findIndex(menu => menu.id === item.id);
+        if(index > -1) {
+            menuItems[index].expand = !menuItems[index].expand;
+        }
+        this.setState({ menuItems })
+    }
+
+    setActiveItem(activeItem) {
+        this.setState({ activeItem });
     }
 
     render() {
-        let { menuItems } = this.state;
+        let { menuItems, activeItem } = this.state;
 
         return (
             <div className="cntxt-nav-wrapper">
                 <div className="cntxt-top">
                     <div className="cntxt-nav-title">Workspaces</div>
                     <div className="filter-board-search">
-                        <img src="./img/search_black.svg" />
+                        <img src="./img/search_black.svg" alt=""/>
                         <input type="text" name="search" placeholder="Filter boards..." />
                     </div>
                 </div>
 
                 <div className="menu-items">
-                    <ul>
-                        {menuItems.map((item, index) => {
-                            return (
-                                <li key={item.id} className="item d-flex" name={item.name}>
-                                    <div className="d-flex align-items-center">
-                                        <i className="fa fa-caret-right CP" aria-hidden="true" title="Expand"></i>
-                                        <i className="fa fa-home ml-2 home-icon" aria-hidden="true"></i>
-                                        <div className="ml-2">{item.name}</div>
-                                    </div>
-                                    <i className="fa fa-plus-circle CP blue" title="Add" aria-hidden="true"></i>
-                                </li>
-                            )
-                        })}
-                    </ul>
+                    <TreeView
+                        treeData={menuItems}
+                        toggleTreeItems={this.expandItem}
+                        selectItem={this.setActiveItem}
+                        activeItem={activeItem}
+                    />
                 </div>
 
                 <div className="cntxt-bottom">

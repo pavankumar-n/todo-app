@@ -1,13 +1,16 @@
 import React from "react";
 
-let FirstRow = ({}) => {
+let FirstRow = () => {
     return (
         <div className="row-item">
+            {/**left content */}
             <div className="menu-label">
                 <span>Web Design</span>
                 <i className="fa fa-star-o font-icons ml-3" aria-hidden="true"></i>
                 <h4 className="description">Add board description</h4>
             </div>
+
+            {/** right icons */}
             <div className="right-icons d-flex align-items-center">
                 <i className="fa fa-user-circle font-icons mr-3" aria-hidden="true"></i>
                 <div className="flex-align-items user-activities mr-3">
