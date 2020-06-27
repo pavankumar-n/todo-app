@@ -14,6 +14,14 @@
     border-radius: 5px;
 }
 
+.BR-5-left {
+    border-radius: 5px 0 0 0;
+}
+
+.BR-5-right {
+    border-radius: 0 5px 0 0;
+}
+
 hr {
     margin-top: 5px;
     margin-bottom: 5px;
@@ -34,7 +42,7 @@ ul {
 }
 
 .blue {
-    color: $blue; 
+    color: $blue !important; 
 }
 
 .bg-pink {
@@ -59,4 +67,20 @@ input[type=text] {
 
 .f-13 {
     font-size: 13px;
+}
+
+.f-18 {
+    font-size: 18px !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.fa-icon-light {
+    color: #ccc;
 }
