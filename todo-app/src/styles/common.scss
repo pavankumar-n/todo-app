@@ -45,10 +45,6 @@ ul {
     color: $blue !important; 
 }
 
-.bg-pink {
-    background-color: $pink;
-}
-
 input[type=text] {
     color: $font-color;
     font-size: 14px;
@@ -83,4 +79,69 @@ input[type=text] {
 
 .fa-icon-light {
     color: #ccc;
+}
+
+.w-4 {
+    width: 4%;
+}
+
+.w-11 {
+    width: 11%;
+}
+
+.bg-light-grey {
+    background-color: $light-grey;
+}
+
+.urgent {
+    background-color: $black;
+    color: $white !important;
+}
+
+.high {
+    background-color: $red;
+    color: $white !important;
+}
+
+.medium {
+    background-color: $violet;
+    color: $white !important;
+}
+
+.low {
+    background-color: $sky-blue;
+    color: $white !important;
+}
+
+.very-low {
+    background-color: $grey;
+    color: $white !important;
+}
+
+.in-progress {
+    background-color: $orange;
+    border-right: 5px solid $light-orange;
+    color: $white !important;
+}
+
+.in-review {
+    background-color: $sky-blue;
+    border-right: 5px solid $light-sky-blue;
+    color: $white !important;
+}
+
+.stuck {
+    background-color: $red;
+    border-right: 5px solid $light-red;
+    color: $white !important;
+}
+
+.done {
+    background-color: $green;
+    border-right: 5px solid $light-green;
+    color: $white !important;
+}
+
+.line-through {
+    text-decoration: line-through;
 }
