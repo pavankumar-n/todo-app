@@ -35,7 +35,7 @@ class TodoList extends Component {
                             <tr>
                                 <th className={`text-left ${textColorPicker[group.type]}`}>
                                     <i className={`fa fa-caret-${group.expand ? 'down' : 'right'} CP`} id={index} onClick={this.collapseItems}></i>
-                                    <span className="ml-2">{group.name}</span>
+                                    <span className="ml-2 FW-500">{group.name}</span>
                                 </th>
                                 <th className="w-4"></th>
                                 <th className="w-11">Owner</th>

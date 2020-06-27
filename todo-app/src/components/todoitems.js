@@ -33,7 +33,7 @@ export const list = [{
     {
         "id": 4,
         "label": "Columns should be draggable",
-        "comments": [],
+        "comments": ["Is it OK"],
         "owner": "",
         "status": "Done",
         "dueDate": "Apr 10",
@@ -75,7 +75,7 @@ export const list = [{
     {
         "id": 2,
         "label": "Move items among the list",
-        "comments": [],
+        "comments": ["Move"],
         "owner": "",
         "status": "Stuck",
         "dueDate": "Apr 10",

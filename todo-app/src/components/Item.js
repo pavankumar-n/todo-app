@@ -23,7 +23,7 @@ let Item = ({ item, type }) => {
         <tr key={item} className={`todo-item ${borderLeftColors[type]}`}>
             <td className="text-left pl-2">{item.label}</td>
             <td>
-                <i className="fa fa-comment-o f-18 fa-icon-light" aria-hidden="true"></i>
+                <i className={`fa fa-comment-o f-18 ${item.comments.length ? 'blue' : 'fa-icon-light'}`} aria-hidden="true"></i>
             </td>
             <td>
                 <i className="fa fa-user-circle f-18 fa-icon-light" aria-hidden="true"></i>
