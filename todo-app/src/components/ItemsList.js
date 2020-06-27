@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import { list } from "./todoitems.js";
-import TodoItem from "./TodoItem.js";
+import Item from "./Item";
+import AddNewItem from "./AddNewItem.js";
+
+const textColorPicker = {
+    "todo": "blue",
+    "done": "green"
+}
 
 class TodoList extends Component {
     constructor(props) {
@@ -27,9 +33,9 @@ class TodoList extends Component {
                     return (<table>
                         <thead>
                             <tr>
-                                <th className="blue text-left">
+                                <th className={`text-left ${textColorPicker[group.type]}`}>
                                     <i className={`fa fa-caret-${group.expand ? 'down' : 'right'} CP`} id={index} onClick={this.collapseItems}></i>
-                                    <span className="ml-2">Things to do</span>
+                                    <span className="ml-2">{group.name}</span>
                                 </th>
                                 <th className="w-4"></th>
                                 <th className="w-11">Owner</th>
@@ -44,20 +50,15 @@ class TodoList extends Component {
                         <tbody>
                             {group.expand && group.items.map(item => {
                                 return (
-                                    <TodoItem
+                                    <Item
                                         item={item}
+                                        type={group.type}
                                     />
                                 )
                             })}
-                            <tr className="todo-item todo-add-item">
-                                <td className="text-left pl-2">+ Add</td>
-                                <td></td>
-                                <td></td>
-                                <td className="bg-light-grey"></td>
-                                <td></td>
-                                <td className="bg-light-grey"></td>
-                                <td></td>
-                            </tr>
+                            <AddNewItem
+                                type={group.type}
+                            />
                         </tbody>
                     </table>)
                 })}

@@ -27,15 +27,29 @@
     color: $font-color;
     font-size: 12px;
     font-weight: 500;
-    border-left: 5px solid $todo-BL-color;
     border-right: 5px solid $BR-color;
     border-bottom: 1px solid $white;
     cursor: all-scroll;
 }
 
+.BL-todo {
+    border-left: 5px solid $todo-BL-color;
+}
+
+.BL-done {
+    border-left: 5px solid $green;
+}
+
+.BL-add-todo {
+    border-left: 5px solid $todo-add-color;
+}
+
+.BL-add-done {
+    border-left: 5px solid $light-green;
+}
+
 .todo-add-item {
     background-color: $white;
-    border-left: 5px solid $todo-add-color;
     border-right: 5px solid $BR-add-color;
     border-bottom: 1px solid #eee;
     color: #ccc;

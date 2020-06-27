@@ -59,7 +59,7 @@ export const list = [{
         "label": "Design UI as per UX",
         "comments": [],
         "owner": "",
-        "status": "Working on it",
+        "status": "Done",
         "dueDate": "Apr 10",
         "priority": "High"
     },
@@ -68,7 +68,7 @@ export const list = [{
         "label": "Should able to add new item",
         "comments": [],
         "owner": "",
-        "status": "Stuck",
+        "status": "Done",
         "dueDate": "Apr 10",
         "priority": "Medium"
     },
@@ -77,9 +77,9 @@ export const list = [{
         "label": "Move items among the list",
         "comments": [],
         "owner": "",
-        "status": "Working on it",
+        "status": "Stuck",
         "dueDate": "Apr 10",
-        "priority": "Low"
+        "priority": "High"
     },
     {
         "id": 3,
