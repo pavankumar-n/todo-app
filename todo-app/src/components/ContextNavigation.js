@@ -64,7 +64,11 @@ class ContextNavigation extends Component {
                         </div>
                     </div>
                 </div>
+                <div className="toggle-button">
+                    <i className="fa fa-angle-left left-arrow-align" aria-hidden="true"></i>
+                </div>
             </div>
+            
         )
     }
 }

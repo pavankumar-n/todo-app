@@ -82,3 +82,26 @@
         border-radius: 5px;
     }
 }
+
+.toggle-button {
+    left: 291px;
+    box-shadow: rgba(9, 30, 66, 0.08) 0px 0px 0px 1px, rgba(9, 30, 66, 0.08) 0px 2px 4px 1px;
+    color: rgb(107, 119, 140);
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    transform: translate(-50%);
+    width: 24px;
+    background: 0px center white;
+    border-radius: 50%;
+}
+
+.left-arrow-align {
+    position: relative;
+    left: 8px;
+}
+
+.toggle-button:hover {
+    background-color: rgb(76, 154, 255);
+    color: white;
+}
