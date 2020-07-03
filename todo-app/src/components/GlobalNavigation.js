@@ -7,7 +7,12 @@ class GlobalNavigation extends Component {
                 
                 {/**Icons at top of sidebar */}
                 <div className="sidebar-icons h-120">
-                    <img className="logo" src="./img/logo.png" alt="" />
+                    {/* <img className="logo" src="./img/logo.png" alt="" /> */}
+                    <div>
+                        <i class="fa fa-circle" style={{fontSize:'10px',color:'#b22b3c',marginRight:'2px'}}></i>
+                        <i class="fa fa-circle" style={{fontSize:'10px',color:'#b38d02',marginRight:'2px'}}></i>
+                        <i class="fa fa-circle" style={{fontSize:'10px',color:'#019633',marginRight:'2px'}}></i>
+                    </div>
                     <i className="fa fa-bell-o white" aria-hidden="true"></i>
                     <div>
                         <i className="fa fa-download white" aria-hidden="true"></i>

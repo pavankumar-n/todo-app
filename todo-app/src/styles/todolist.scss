@@ -42,3 +42,35 @@
     cursor: pointer;
 }
 
+.progress-align {
+    position: relative;
+    right: 26px;
+}
+
+.col-fill {
+    position: relative;
+    left: 3px;
+}
+
+.back-fill {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: inline-block;
+    box-shadow: rgba(9, 30, 66, 0.08) 0px 0px 0px 1px, rgba(9, 30, 66, 0.08) 0px 2px 4px 1px;
+}
+
+.fa-caret-down:before {
+    position: relative;
+    left: 3px;
+}
+
+.fa-caret-right:before {
+    position: relative;
+    left: 5px;
+}
+
+.fa-icon-light:hover {
+    color: black;
+}

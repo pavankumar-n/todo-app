@@ -19,9 +19,9 @@ let SecondRow = () => {
                     </button>
                 </div>
                 <input className="filter-board-inp mr-3" type="text" placeholder="Search / Filter Board" />
-                <i className="fa fa-user-o font-icons mr-3" aria-hidden="true"></i>
-                <i className="fa fa-eye-slash font-icons mr-3" aria-hidden="true"></i>
-                <i className="fa fa-sort-amount-desc font-icons f-13" aria-hidden="true"></i>
+                <i className="fa fa-user-circle f-18 fa-icon-light mr-3 mr-3" aria-hidden="true"></i>
+                <i className="fa fa-eye-slash fa-icon-light mr-3" aria-hidden="true"></i>
+                <i className="fa fa-wifi fa-icon-light f-13" aria-hidden="true"></i>
             </div>
         </div>
     )

@@ -24,7 +24,14 @@ let TodoItem = ({ item }) => {
                 <i className="fa fa-user-circle f-18 fa-icon-light" aria-hidden="true"></i>
             </td>
             <td className={classes[item.status]}>{item.status}</td>
-            <td className={item.status === "Done" ? "line-through" : ""}>{item.dueDate}</td>
+            <td className={item.status === "Done" ? "line-through" : ""}>
+                <span className="progress-align">
+                    <i class="fa fa-adjust"></i>
+                </span>
+                <span>
+                    {item.dueDate}
+                </span>
+            </td>
             <td className={classes[item.priority]}>{item.priority}</td>
             <td></td>
         </tr>

@@ -40,5 +40,7 @@
     text-align: center;
     &::before {
         content: "1";
+        position: relative;
+        bottom: 3px;
     }
 }

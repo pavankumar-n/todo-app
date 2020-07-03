@@ -13,7 +13,7 @@ let TreeView = ({ treeData, toggleTreeItems, activeItem, selectItem }) => {
                                 <i className="fa fa-home ml-2 home-icon" aria-hidden="true"></i>
                                 <div className="ml-2">{item.name}</div>
                             </div>
-                            <i className="fa fa-plus-circle CP blue" title="Add" aria-hidden="true"></i>
+                            <span className="circle plus"></span>
                         </div>
                         {item.expand && item.subMenu.length ?
                             <ul className="sub-menu-wrap">

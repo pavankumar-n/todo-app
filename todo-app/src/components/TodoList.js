@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { list } from "./todoitems.js";
 import TodoItem from "./TodoItem.js";
+import BottomProgress from "../components/BottomProgress";
 
 class TodoList extends Component {
     constructor(props) {
@@ -27,9 +28,11 @@ class TodoList extends Component {
                     return (<table>
                         <thead>
                             <tr>
-                                <th className="blue text-left">
-                                    <i className={`fa fa-caret-${group.expand ? 'down' : 'right'} CP`} id={index} onClick={this.collapseItems}></i>
-                                    <span className="ml-2">Things to do</span>
+                                <th className="text-left">
+                                    <div>
+                                        <i className={`fa fa-caret-${group.expand ? 'down col-fill' : 'right'} CP back-fill`} id={index} onClick={this.collapseItems}></i>
+                                        <span className="ml-2 blue">Things to do</span>
+                                    </div>
                                 </th>
                                 <th className="w-4"></th>
                                 <th className="w-11">Owner</th>
@@ -41,6 +44,7 @@ class TodoList extends Component {
                                 </th>
                             </tr>
                         </thead>
+                        
                         <tbody>
                             {group.expand && group.items.map(item => {
                                 return (
@@ -59,6 +63,7 @@ class TodoList extends Component {
                                 <td></td>
                             </tr>
                         </tbody>
+                        <BottomProgress />
                     </table>)
                 })}
             </div>

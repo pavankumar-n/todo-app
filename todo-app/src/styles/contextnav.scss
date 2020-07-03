@@ -59,11 +59,15 @@
     font-weight: 500;
     .dashboard {
         margin: 10px 12px;
+        font-weight: 700;
+        font-size: 14px;
     }
     .app-icons {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+        font-weight: 650;
+        font-size: 14px;
     }
 }
 
@@ -101,7 +105,42 @@
     left: 8px;
 }
 
+.right-arrow-align {
+    position: relative;
+    left: 10px;
+}
+
 .toggle-button:hover {
     background-color: rgb(76, 154, 255);
     color: white;
+}
+
+.circle{
+    border:1px solid #009afe;
+    width:20px;
+    height:20px;
+    border-radius:100%;
+    position:relative;
+    margin:4px;
+    display:inline-block;
+    vertical-align:middle;
+  }
+
+.circle.plus:before,
+.circle.plus:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:#009afe;
+}
+.circle.plus:before{
+    width: 2px;
+    margin: 2px auto;
+}
+.circle.plus:after{
+    margin: auto 2px;
+    height: 2px;
 }

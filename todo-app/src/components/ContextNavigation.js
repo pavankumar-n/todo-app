@@ -12,7 +12,9 @@ class ContextNavigation extends Component {
                 subMenu: [{ id: "1.1", name: "Web Design" }, { id: "1.2", name: "Web Application" }, { id: "1.3", name: "Websites" }],
                 expand: true
             }],
-            activeItem: { id: "1.1", name: "Web Design" }
+            activeItem: { id: "1.1", name: "Web Design" },
+            toggle: false,
+            styles: {}
         }
         this.expandItem     = this.expandItem.bind(this);
         this.setActiveItem  = this.setActiveItem.bind(this);
@@ -31,11 +33,28 @@ class ContextNavigation extends Component {
         this.setState({ activeItem });
     }
 
+    toggle = () => {
+        if(this.state.toggle){
+            this.props.handleToggle(false);
+            this.setState({
+                toggle : false
+            })
+        }
+        if(!this.state.toggle){
+            this.props.handleToggle(true);
+            this.setState({
+                toggle : true
+            })
+        }
+    }
+
     render() {
-        let { menuItems, activeItem } = this.state;
+        let { menuItems, activeItem, toggle } = this.state;
 
         return (
-            <div className="cntxt-nav-wrapper">
+            <div className="cntxt-nav-wrapper" style={ toggle ? { width: 30 } : { width: 240 }}>
+                {!toggle ? 
+                <div className="align-items">
                 <div className="cntxt-top">
                     <div className="cntxt-nav-title">Workspaces</div>
                     <div className="filter-board-search">
@@ -53,6 +72,7 @@ class ContextNavigation extends Component {
                     />
                 </div>
 
+                
                 <div className="cntxt-bottom">
                     <hr />
                     <div className="dashboard">Dashboards</div>
@@ -64,8 +84,16 @@ class ContextNavigation extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="toggle-button">
-                    <i className="fa fa-angle-left left-arrow-align" aria-hidden="true"></i>
+                
+                </div>
+                :
+                ""}
+                <div className="toggle-button" style={ toggle ? { left: 81 } : { left: 291 }} onClick={this.toggle}>
+                    {toggle ?
+                        <i className="fa fa-angle-right right-arrow-align" aria-hidden="true"></i>
+                    :
+                        <i className="fa fa-angle-left left-arrow-align" aria-hidden="true"></i>
+                    }
                 </div>
             </div>
             
