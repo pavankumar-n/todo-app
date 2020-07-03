@@ -45,6 +45,10 @@ ul {
     color: $blue !important; 
 }
 
+.green {
+    color: $green !important; 
+}
+
 input[type=text] {
     color: $font-color;
     font-size: 14px;
@@ -158,4 +162,8 @@ input[type=text] {
 ::-webkit-scrollbar-thumb {
     background-color: $BR-color;
     border-radius: 5px;
+}
+
+.FW-500 {
+    font-weight: 500;
 }

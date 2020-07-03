@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import TopRow from "./TopRow";
-import TodoList from "./TodoList";
+import ItemsList from "./ItemsList";
 
 class MainGrid extends Component {
 
@@ -9,7 +9,7 @@ class MainGrid extends Component {
             <div>
                 <TopRow />
                 <hr />
-                <TodoList />
+                <ItemsList />
             </div>
         )
     }

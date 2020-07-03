@@ -1,7 +1,13 @@
 import React, { Component } from "react";
 import { list } from "./todoitems.js";
-import TodoItem from "./TodoItem.js";
-import BottomProgress from "../components/BottomProgress";
+import Item from "./Item";
+import AddNewItem from "./AddNewItem.js";
+import BottomProgress from "./BottomProgress";
+
+const textColorPicker = {
+    "todo": "blue",
+    "done": "green"
+}
 
 class TodoList extends Component {
     constructor(props) {
@@ -28,10 +34,10 @@ class TodoList extends Component {
                     return (<table>
                         <thead>
                             <tr>
-                                <th className="text-left">
+                                <th className={`text-left ${textColorPicker[group.type]}`}>
                                     <div>
                                         <i className={`fa fa-caret-${group.expand ? 'down col-fill' : 'right'} CP back-fill`} id={index} onClick={this.collapseItems}></i>
-                                        <span className="ml-2 blue">Things to do</span>
+                                        <span className="ml-2 FW-500">{group.name}</span>
                                     </div>
                                 </th>
                                 <th className="w-4"></th>
@@ -48,20 +54,15 @@ class TodoList extends Component {
                         <tbody>
                             {group.expand && group.items.map(item => {
                                 return (
-                                    <TodoItem
+                                    <Item
                                         item={item}
+                                        type={group.type}
                                     />
                                 )
                             })}
-                            <tr className="todo-item todo-add-item">
-                                <td className="text-left pl-2">+ Add</td>
-                                <td></td>
-                                <td></td>
-                                <td className="bg-light-grey"></td>
-                                <td></td>
-                                <td className="bg-light-grey"></td>
-                                <td></td>
-                            </tr>
+                            <AddNewItem
+                                type={group.type}
+                            />
                         </tbody>
                         <BottomProgress />
                     </table>)
